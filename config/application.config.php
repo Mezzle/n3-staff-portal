@@ -3,7 +3,7 @@
 return [
     // Development time modules
     'modules' => [
-        'Application',
+        'Nerd3\StaffPortal',
         'ZF\DevelopmentMode',
         'DoctrineModule',
         'DoctrineORMModule',

@@ -1,12 +1,12 @@
 ### Doctrine Mapping Files
 
-Generic Application Mapping files go here.
+Generic Nerd3\StaffPortal Mapping files go here.
 
 For example
 
 User.User.orm.yml
 ```yaml
-Application\User\User:
+Nerd3\StaffPortal\User\User:
   type: entity
   table: user
   id:

@@ -21,8 +21,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Application\\": [
-                "module/Application/src"
+            "Nerd3\\StaffPortal\\": [
+                "module/StaffPortal/src"
             ]
         }
     }

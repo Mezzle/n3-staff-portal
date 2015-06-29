@@ -1,4 +1,4 @@
-### ZF2 + Doctrine + Twig Skeleton Application
+### ZF2 + Doctrine + Twig Skeleton Nerd3\StaffPortal
 
 
 Introduction
@@ -53,7 +53,7 @@ interfaces.
 
 ### Vagrant server
 
-This project supports a basic [Vagrant](http://docs.vagrantup.com/v2/getting-started/index.html) configuration with an inline shell provisioner to run the Skeleton Application in a [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
+This project supports a basic [Vagrant](http://docs.vagrantup.com/v2/getting-started/index.html) configuration with an inline shell provisioner to run the Skeleton Nerd3\StaffPortal in a [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
 1. Run vagrant up command
 

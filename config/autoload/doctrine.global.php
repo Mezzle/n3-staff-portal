@@ -6,7 +6,7 @@ return [
             'orm_default' => [
                 'class' => 'Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver',
                 'paths' => [
-                    __DIR__ . '/../doctrine/application' => 'Application'
+                    __DIR__ . '/../doctrine/application' => 'Nerd3\StaffPortal'
                 ]
             ]
         ],

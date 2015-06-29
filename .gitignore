@@ -2,4 +2,4 @@ vendor/
 composer.lock
 config/autoload/*.local.php
 !config/autoload/*.local.php.dist
-
+bower_components

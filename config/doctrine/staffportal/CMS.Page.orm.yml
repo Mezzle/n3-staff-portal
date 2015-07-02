@@ -1,0 +1,17 @@
+Nerd3\StaffPortal\CMS\Page:
+  type: entity
+  table: page
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    title:
+      type: string
+    markdown:
+      type: text
+    parsed:
+      type: text
+  manyToOne:
+

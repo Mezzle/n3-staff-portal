@@ -3,11 +3,14 @@
 return [
     // Development time modules
     'modules' => [
-        'Nerd3\StaffPortal',
         'ZF\DevelopmentMode',
         'DoctrineModule',
         'DoctrineORMModule',
         'ZfcTwig',
+        'ZfcBase',
+        'ZfcUser',
+        'ZfcUserDoctrineORM',
+        'Nerd3\StaffPortal'
     ],
     'module_listener_options' => [
         'module_paths' => [

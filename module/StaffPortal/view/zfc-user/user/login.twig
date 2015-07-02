@@ -1,0 +1,33 @@
+{% extends 'layout/layout' %}
+
+{% block content %}
+    <h1>{{ translate('Sign In') }}</h1>
+
+    {% set form = loginForm %}
+    {% do form.prepare() %}
+    {% do form.setAttribute('action', url('zfcuser/login')) %}
+    {% do form.setAttribute('method', 'post') %}
+
+    {{ form().openTag(form)|raw }}
+
+<dl class="dl-horizontal">
+    {{ formElementErrors(form.get('identity')) }}
+
+    <dt>{{ formLabel(form.get('identity')) }}</dt>
+    <dd>{{ formInput(form.get('identity')) }}</dd>
+
+    <dt>{{ formLabel(form.get('credential')) }}</dt>
+    <dd>{{ formInput(form.get('credential')) }}</dd>
+
+    {% if redirect %}
+    <input type="hidden" name="redirect" value="{{ redirect }}" />
+    {% endif %}
+
+    <dd>{{ formButton(form.get('submit')) }}</dd>
+</dl>
+{{ form().closeTag()|raw }}
+
+    {% if enableRegistration %}
+{{ translate('Not Registered?') }} <a href="{{ url('zfcuser/register') }}{% if redirect %}?redirect={{ redirect|url_encode }}{% endif %}">{{ translate('Sign up!') }}</a>
+{% endif %}
+{% endblock %}

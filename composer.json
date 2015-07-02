@@ -11,9 +11,11 @@
     ],
     "require": {
         "doctrine/doctrine-orm-module": "0.*",
+        "erusev/parsedown-extra": "~0.7.0",
         "zendframework/zendframework": "~2.5",
         "zfcampus/zf-development-mode": "2.*",
-        "zf-commons/zfc-twig": "~1.2.2"
+        "zf-commons/zfc-twig": "~1.2.2",
+        "zf-commons/zfc-user-doctrine-orm": "~1"
     },
     "require-dev": {
         "zendframework/zend-developer-tools": "dev-master",

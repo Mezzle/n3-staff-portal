@@ -12,4 +12,12 @@
  */
 
 return [
+    'zfctwig' => [
+        'environment_options' => [
+            'autoescape' => true
+        ],
+        'extensions' => [
+            'nerd3' => 'Nerd3\StaffPortal\Twig\Extension'
+        ]
+    ]
 ];

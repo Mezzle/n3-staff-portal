@@ -9,6 +9,10 @@ return [
         'translator' => 'MvcTranslator',
     ],
     'factories' => [
-        'InjectTemplateListener' => 'Nerd3\StaffPortal\Mvc\Service\InjectTemplateListenerFactory'
+        'InjectTemplateListener' => 'Nerd3\StaffPortal\Mvc\Service\InjectTemplateListenerFactory',
+        'Parser\Markdown' => 'Nerd3\StaffPortal\Markdown\ParserFactory'
+    ],
+    'initializers' => [
+        'Nerd3\StaffPortal\Markdown\ParserInitializer'
     ]
 ];

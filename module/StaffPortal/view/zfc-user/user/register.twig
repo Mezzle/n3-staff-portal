@@ -1,0 +1,36 @@
+{% extends 'layout/layout' %}
+
+{% block title %}{{ translate('Register') }}{% endblock %}
+
+{% block content %}
+<h1>{{ translate('Register') }}</h1>
+
+{% if not enableRegistration %}
+    Registration is disabled
+{% else %}
+    {% do registerForm.prepare() %}
+    {% do registerFrom.setAttribute('action', url('zfcuser/register')) %}
+    {% do registerForm.setAttribute('method', 'post') %}
+
+    {{ form().openTag(registerForm)|raw }}
+
+    <dl class="form-horizontal">
+        {% for element in registerForm %}
+            {% if not element is button %}
+                <dt>{{ formLabel(element) }}</dt>
+            {% endif %}
+            {% if element is button %}
+                <dd>{{ formButton(element) }}</dd>
+            {% elseif element is captcha %}
+                <dd>{{ formCaptcha(element) }}{{ formElementErrors(element) }}</dd>
+            {% else %}
+                <dd>{{ formInput(element) }}{{ formElementErrors(element) }}</dd>
+            {% endif %}
+        {% endfor %}
+    </dl>
+    {% if redirect %}
+        <input type="hidden" name="redirect" value="{{ redirect }}" />
+    {% endif %}
+    {{ form().closeTag()|raw }}
+{% endif %}
+{% endblock %}

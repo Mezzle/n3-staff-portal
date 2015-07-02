@@ -68,4 +68,11 @@ return [
             ],
         ],
     ],
+    'zfctwig' => [
+        'helper_manager' => [
+            'invokables' => [
+                'formLab'
+            ]
+        ]
+    ]
 ];

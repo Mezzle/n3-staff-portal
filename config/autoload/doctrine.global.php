@@ -3,10 +3,15 @@
 return [
     'doctrine' => [
         'driver' => [
-            'orm_default' => [
+            'orm_staffportal' => [
                 'class' => 'Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver',
                 'paths' => [
-                    __DIR__ . '/../doctrine/application' => 'Nerd3\StaffPortal'
+                    __DIR__ . '/../doctrine/staffportal' => 'Nerd3\StaffPortal'
+                ]
+            ],
+            'orm_default' => [
+                'drivers' => [
+                    'Nerd3\StaffPortal' => 'orm_staffportal'
                 ]
             ]
         ],

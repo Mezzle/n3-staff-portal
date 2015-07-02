@@ -23,7 +23,7 @@ return [
                     'port' => parse_url(getenv('DATABASE_URL'), PHP_URL_PORT),
                     'user' => parse_url(getenv('DATABASE_URL'), PHP_URL_USER),
                     'password' => parse_url(getenv('DATABASE_URL'), PHP_URL_PASS),
-                    'dbname' => parse_url(getenv('DATABASE_URL'), PHP_URL_PATH),
+                    'dbname' => trim(parse_url(getenv('DATABASE_URL'), PHP_URL_PATH), '/'),
                 ]
             ]
         ]

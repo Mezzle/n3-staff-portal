@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "hhvm": "*",
         "doctrine/doctrine-orm-module": "0.*",
         "erusev/parsedown-extra": "~0.7.0",
         "zendframework/zendframework": "~2.5",

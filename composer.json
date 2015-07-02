@@ -19,7 +19,8 @@
     },
     "require-dev": {
         "zendframework/zend-developer-tools": "dev-master",
-        "zendframework/zftool": "0.1.0"
+        "zendframework/zftool": "0.1.0",
+        "heroku/heroku-buildpack-php": "*"
     },
     "autoload": {
         "psr-4": {

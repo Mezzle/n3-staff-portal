@@ -39,12 +39,9 @@ class Module implements
      */
     public function getControllerConfig()
     {
-        // TODO: Implement getControllerConfig() method.
-
         return [
-
             'invokables' => [
-                'Nerd3\StaffPortal\Controller\Index' => 'Nerd3\StaffPortal\Controller\IndexController',
+                'index' => 'Nerd3\StaffPortal\Controller\IndexController',
                 'page' => 'Nerd3\StaffPortal\CMS\PageController'
             ],
         ];

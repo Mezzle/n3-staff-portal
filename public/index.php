@@ -3,6 +3,7 @@
  * This makes our life easier when dealing with paths. Everything is relative
  * to the application root now.
  */
+use Zend\Mvc\Application;
 use Zend\Stdlib\ArrayUtils;
 
 chdir(dirname(__DIR__));
@@ -34,4 +35,4 @@ if (file_exists('config/development.config.php')) {
 }
 
 // Run the application!
-Zend\Mvc\Application::init($appConfig)->run();
+Application::init($appConfig)->run();

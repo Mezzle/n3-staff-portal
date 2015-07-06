@@ -6,8 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "",
-    "license": "ISC",
+    "author": "Martin Meredith <martin@sourceguru.net>",
+    "license": "GPL-3",
     "dependencies": {
         "bower": "~1.4.1"
     }

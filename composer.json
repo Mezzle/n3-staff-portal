@@ -29,5 +29,10 @@
                 "module/StaffPortal/src"
             ]
         }
+    },
+    "scripts": {
+        "compile": [
+            "bower install"
+        ]
     }
 }

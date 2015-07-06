@@ -13,5 +13,17 @@ Nerd3\StaffPortal\CMS\Page:
       type: text
     parsed:
       type: text
+    created_at:
+      type: datetime
+    last_modified:
+      type: datetime
   manyToOne:
+    created_by:
+      targetEntity: Nerd3\StaffPortal\User\User
+      joinColumn:
+        referencedColumnName: user_id
+    last_modified_by:
+      targetEntity: Nerd3\StaffPortal\User\User
+      joinColumn:
+        referencedColumnName: user_id
 

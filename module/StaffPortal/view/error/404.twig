@@ -14,7 +14,7 @@
     {% elseif reason == 'error-controller-cannot-dispatch' %}
         {% set reason_message = translate('The requested controller was unable to dispatch the request.') %}
     {% else %}
-        {% set reason_message = translate('We cannot determine at this time why a 404 was generated.') %}
+        {% set reason_message = translate('We cannot determine at this time why a 404 was generated. (%s)'|format(reason)) %}
     {% endif %}
 
     <p>{{ reason_message }}</p>

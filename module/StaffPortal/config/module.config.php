@@ -16,7 +16,7 @@ return [
                     'default' => [
                         'type'    => 'Segment',
                         'options' => [
-                            'route'    => '/[:controller[/:action]]',
+                            'route'    => '[:controller[/:action]]',
                             'constraints' => [
                                 'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
                                 'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
@@ -38,11 +38,6 @@ return [
                 'base_dir' => __DIR__ . '/../language',
                 'pattern'  => '%s.mo',
             ],
-        ],
-    ],
-    'controllers' => [
-        'invokables' => [
-            'Nerd3\StaffPortal\Controller\Index' => 'Nerd3\StaffPortal\Controller\IndexController'
         ],
     ],
     'view_manager' => [

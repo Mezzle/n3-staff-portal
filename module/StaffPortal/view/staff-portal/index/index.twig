@@ -1,5 +1,7 @@
 {% extends "layout/layout" %}
 
 {% block content %}
-<h1>Hello Wald.</h1>
+{% if user %}
+<h1>Hello {{ user.getDisplayName() }}</h1>
+{% endif %}
 {% endblock %}

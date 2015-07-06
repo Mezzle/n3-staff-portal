@@ -1,6 +1,8 @@
 <?php
 namespace Nerd3\StaffPortal\CMS;
 
+use Nerd3\StaffPortal\Model\Model;
+
 /**
  * Page
  *
@@ -8,12 +10,9 @@ namespace Nerd3\StaffPortal\CMS;
  * @author Martin Meredith <martin@sourceguru.net>
  * @copyright 2015 Martin Meredith
  */
-class Page
+class Page extends Model
 {
-    /**
-     * @var int|null $id
-     */
-    protected $id;
+    use AuditableTrait;
 
     /**
      * @var string $title
@@ -24,36 +23,46 @@ class Page
      * @var string $markdown
      */
     protected $markdown = '';
+
     /**
      * @var string $parsed
      */
     protected $parsed = '';
 
     /**
-     * @var \ZfcUserDoctrineORM\Entity\User $created_by
+     * @var string $slug
      */
-    protected $created_by;
+    protected $slug = '';
 
     /**
-     * getId
-     *
-     * @return int|null
+     * @var string $path
      */
-    public function getId()
+    protected $path = '';
+    /**
+     * @var string $extension
+     */
+    protected $extension = '.html';
+
+    /**
+     * getExtension
+     *
+     * @return string
+     */
+    public function getExtension()
     {
-        return $this->id;
+        return $this->extension;
     }
 
     /**
-     * setId
+     * setExtension
      *
-     * @param int|null $id
+     * @param string $extension
      *
      * @return $this
      */
-    public function setId($id)
+    public function setExtension($extension)
     {
-        $this->id = $id;
+        $this->extension = $extension;
 
         return $this;
     }
@@ -90,6 +99,54 @@ class Page
     public function getParsed()
     {
         return $this->parsed;
+    }
+
+    /**
+     * getPath
+     *
+     * @return string
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    /**
+     * setPath
+     *
+     * @param string $path
+     *
+     * @return $this
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+
+    /**
+     * getSlug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * setSlug
+     *
+     * @param string $slug
+     *
+     * @return $this
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
     }
 
     /**

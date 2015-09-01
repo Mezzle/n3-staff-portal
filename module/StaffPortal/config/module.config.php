@@ -1,9 +1,14 @@
 <?php
+
+namespace Nerd3\StaffPortal;
+
+use TacticianModule\Locator\ClassnameZendLocator;
+
 return [
     'router' => [
         'routes' => [
             'home' => [
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => \Zend\Mvc\Router\Http\Literal::class,
                 'options' => [
                     'route' => '/',
                     'defaults' => [
@@ -30,6 +35,9 @@ return [
         ],
     ],
     'service_manager' => require __DIR__ . '/service.config.php',
+    'tactician' => [
+        'default-locator' => ClassnameZendLocator::class,
+    ],
     'translator' => [
         'locale' => 'en_US',
         'translation_file_patterns' => [

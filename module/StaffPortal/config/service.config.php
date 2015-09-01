@@ -1,5 +1,7 @@
 <?php
 
+namespace Nerd3\StaffPortal;
+
 return [
     'abstract_factories' => [
         'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
@@ -9,10 +11,10 @@ return [
         'translator' => 'MvcTranslator',
     ],
     'factories' => [
-        'InjectTemplateListener' => 'Nerd3\StaffPortal\Mvc\Service\InjectTemplateListenerFactory',
-        'Parser\Markdown' => 'Nerd3\StaffPortal\Markdown\ParserFactory'
+        'InjectTemplateListener' => Mvc\Service\InjectTemplateListenerFactory::class,
+        'Parser\Markdown' => Markdown\ParserFactory::class,
     ],
     'initializers' => [
-        'Nerd3\StaffPortal\Markdown\ParserInitializer'
-    ]
+        Markdown\ParserInitializer::class,
+    ],
 ];

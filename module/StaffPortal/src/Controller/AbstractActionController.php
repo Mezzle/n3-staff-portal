@@ -2,6 +2,7 @@
 
 namespace Nerd3\StaffPortal\Controller;
 
+use Zend\Http\Request;
 use Zend\Mvc\Controller\AbstractActionController as ZendAbstractActionController;
 use Zend\View\Model\ViewModel;
 
@@ -15,6 +16,16 @@ use Zend\View\Model\ViewModel;
 class AbstractActionController extends ZendAbstractActionController
 {
     /**
+     * getFormElementManager
+     *
+     * @return \Zend\Form\FormElementManager
+     */
+    protected function getFormElementManager()
+    {
+        return $this->getServiceLocator()->get('FormElementManager');
+    }
+
+    /**
      * getViewModel
      *
      * @return \Zend\View\Model\ViewModel
@@ -22,5 +33,23 @@ class AbstractActionController extends ZendAbstractActionController
     protected function getViewModel()
     {
         return new ViewModel();
+    }
+
+    /**
+     * isPost
+     *
+     * @return bool
+     */
+    public function isPost()
+    {
+        $request = $this->getRequest();
+
+        if ($request instanceof Request) {
+            if ($request->isPost()) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

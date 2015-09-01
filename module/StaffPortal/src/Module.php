@@ -2,6 +2,8 @@
 
 namespace Nerd3\StaffPortal;
 
+use Nerd3\StaffPortal\CMS\PageController;
+use Nerd3\StaffPortal\Controller\IndexController;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature\BootstrapListenerInterface;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
@@ -41,8 +43,8 @@ class Module implements
     {
         return [
             'invokables' => [
-                'index' => 'Nerd3\StaffPortal\Controller\IndexController',
-                'page' => 'Nerd3\StaffPortal\CMS\PageController'
+                'index' => IndexController::class,
+                'page' => PageController::class
             ],
         ];
     }
